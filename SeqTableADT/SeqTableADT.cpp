@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
 			break;
 		case 5:
 			st = ListLength(L);
-			if (~st)puts("线性表不存在！");
+			if (st==INFEASIBLE)puts("线性表不存在！");
 			else printf("线性表的长度是：%d\n", st);
 			t_sleep(500);
 			break;
@@ -171,8 +171,8 @@ int main(int argc, char* argv[])
 			}
 			break;
 		default:
-			puts("您惊扰了 Witch");
-			// puts("您输入了一个不太合理的数字哦~");
+			// puts("您惊扰了 Witch");
+			puts("您输入了一个不太合理的数字哦~");
 			puts("请重新输入");
 			break;
 		}
@@ -205,7 +205,7 @@ void printStatus(int st, int op) {
 	}
 	else if (st == ERROR) {
 		switch (op) {
-		case 1:case 15:
+		case 1:
 			puts("[ERROR]\t分配内存错误！");
 			break;
 		case 6:
@@ -222,6 +222,9 @@ void printStatus(int st, int op) {
 			break;
 		case 11:
 			puts("要删除的位置不合法！");
+			break;
+		case 15:
+			puts("输入的名字已经存在一个线性表！");
 			break;
 		case 16:case 17:
 			puts("该名字的线性表不存在！");
@@ -264,5 +267,5 @@ void printMenu() {
 	puts("15. 【多线性表管理】插入一个空的线性表");
 	puts("16. 【多线性表管理】删除一个线性表");
 	puts("17. 【多线性表管理】查找一个线性表的逻辑位置");
-	puts("20. 【附加功能】");
+	//puts("20. 【附加功能】");
 }

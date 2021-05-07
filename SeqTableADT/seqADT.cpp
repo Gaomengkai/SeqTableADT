@@ -246,6 +246,11 @@ status AddList(LISTS& Lists, char ListName[]) {
     /// <param name="Lists"></param>
     /// <param name="ListName"></param>
     /// <returns></returns>
+    for (int i = 0; i < Lists.length; ++i) {
+        if (strcmp(Lists.elem[i].name, ListName) == 0) {
+            return ERROR;
+        }
+    }
     strcpy(Lists.elem[Lists.length].name, ListName);
     Lists.elem[Lists.length].L.elem = (ElemType*)calloc(LIST_INIT_SIZE, sizeof(ElemType));
     if (Lists.elem[Lists.length].L.elem == NULL) return ERROR;
