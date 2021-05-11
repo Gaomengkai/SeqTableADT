@@ -86,8 +86,8 @@ int main(int argc, char* argv[])
 			cin >> e;
 			st = LocateElem(L, e);
 			PRINT_STATUS;
-			if (st == OK){
-				cout << "您要查找的元素的位置是" << st << endl;
+			if (st >= OK){
+				cout << e <<"的位置是" << st << endl;
 				t_sleep(500);
 			}
 			break;
@@ -216,6 +216,9 @@ void printStatus(int st, int op) {
 			break;
 		case 8:
 			puts("查找的元素没有前驱或者元素不合法！");
+			break;
+		case 9:
+			puts("查找的元素没有后继或者元素不合法！");
 			break;
 		case 10:
 			puts("插入的位置不合法，或者内存分配错误！");

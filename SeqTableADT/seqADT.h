@@ -7,8 +7,7 @@
 #define ERROR 0
 #define INFEASIBLE -1
 #define FILEERROR -2
-//#define OVERFLOW -2 // REDEFINE OF OVERFLOW
-
+//#define OVERFLOW -2 // REDEFINE OF OVERFLOWOVERFLOW
 typedef int status;
 
 typedef int ElemType; //数据元素类型定义
